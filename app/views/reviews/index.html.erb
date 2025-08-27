@@ -1,0 +1,18 @@
+<%= link_to "Create new", new_restaurant_review_path, class:"btn btn-primary mb-3 float-end" %>
+
+<h1>All reviews:</h1>
+<br>
+
+
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+<% @reviews.each do |review| %>
+  <div class="col">
+  <div class="card h-100" style="width: 18rem;">
+    <div class="card-body">
+        <%= link_to review.content class:"h5 card-title text-danger" %>
+        <p class="card-text"><%= review.rating%></p>
+      </div>
+    </div>
+  </div>
+  <% end %>
+  </div>
